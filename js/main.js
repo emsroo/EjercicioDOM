@@ -1,10 +1,15 @@
 
 let btnMostrar = document.getElementById("btnMostrar");
 
+
 let encabezado1 = document.getElementById("encabezado1");
 let encabezado2 = document.getElementById("encabezado2");
 let contador = 0;
 let listas = document.getElementsByTagName("ul");
+
+
+
+
 console.log(listas.length);
 console.log(listas[0]);
 console.log(listas.item(1))
@@ -36,17 +41,40 @@ function modifica() {
 
 
 
-/// PARTE 2 
+/// PARTE 2  This is an example of 
 
 function changeColor(newColor) {
     const elem = document.getElementById("para");
     elem.style.color = newColor;
 }
 
-//funcion anonima
+//funcion anonima que revisa acciones del boton mouse (oreja)
 btnMostrar.addEventListener("click", function (event) {
     event.preventDefault(); // no hagas lo que haces por defecto
-    console.log("boton btnModificar presionado");
+    console.log("boton btnModificar presionado"); 
+
+    let element = document.createElement("li"); //crear el elemento que yo quiera
+    element.innerText="Another item"; // <li> Another Item</li>
+    element.classList.add("list-group-item"); // anadir una clase para que tenga el border
+    // Se puede anadir dos clases, con un espacoi en el cmand anterior, o sino repitiendolo, y asignas clas
+    element.id="";  // no tiene sentido tener una lista de ids, porque el id es unico
+
+
+    //THis is to clone the element and change the inner text
+    let element2 = element.cloneNode(true);
+    element.innerText="Another item"; // <li> Another Item</li>
+    // -------------------------------------------------------
+
+
+    // inserta el elemento antes de la lista, prepend es prinicipio de lista
+    //  append despues o al final de la lista
+    //  after es despues de la lista
+    // listas.item(0).before(element) //yo lo quiero antes checa la imagen, vas a la primera lista
+
+    listas.item(0).prepend(element);
+    listas.item(0).after(element2);
+    // -------------------------------------------------------
+
 
 })
 
