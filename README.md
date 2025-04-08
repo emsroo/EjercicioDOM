@@ -31,4 +31,5 @@ git add .
 git commit -m "mensaje"
 git push origin main 
 ```
-
+>vista previa del index.html
+![image](https://github.com/emsroo/EjercicioDOM/blob/main/images/8589130570139-dusk-camel-pyramids-cairo-egypt-top-travel-lists-wallpaper-hd.webp)
