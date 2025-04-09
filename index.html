@@ -15,8 +15,21 @@
     <em onclick="modifica()">Cursiva</em>
 
     <form>
+        <!-- Se anaden dos formularios, el for se relaciona con ID para mandar al campo necesario -->
+        <div class="mb-3">
+            <label for="txtRFC" class="form-label">RFC: </label>
+            <input type="text" class="form-control" id="txtRFC" placeholder="Escribe tu RFC">
+        </div>
+        <div class="mb-3">
+            <label for="txtCURP" class="form-label">Curp: </label>
+            <input type="text" class="form-control" id="txtCURP" placeholder="Escribe tu CURP">
+        </div>
+        <div class="mb-3">
+            <label for="txtTelefono" class="form-label">Telefono: </label>
+            <input type="text" class="form-control" id="txtTelefono" placeholder="555641111">
+        </div>
+    
         <!-- el botton al ser tippo submit, se encarga de mandar informacion -->
-
         <button type="submit" id="btnMostrar" class="btn btn-primary">Este es mi boton</button>
     </form>
     <h3 id="encabezad3">DOM ejercicio </h3>
